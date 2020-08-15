@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh java -version
+                echo sh java -version
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh docker --version
+                echo sh docker --version
             }
         }
         stage('Deploy') {
