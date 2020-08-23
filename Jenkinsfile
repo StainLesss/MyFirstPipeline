@@ -10,6 +10,7 @@ pipeline {
                 /* Add additional data about the build */
                 echo "Build no ${BUILD_ID}"//only double quote when refering to environmental variable"
                 echo "Build proceed at the location : ${WORKSPACE}"
+                echo pwd()
                 bat 'javac test.java'
                 bat 'java test'
             }
