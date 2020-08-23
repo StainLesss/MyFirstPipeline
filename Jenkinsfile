@@ -24,6 +24,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sleep 10  // Sleep 10 seconde
+                /*  sleep time: 10, unit: 'NANOSECONDS'   can be change with NANOSECONDS / MICROSECONDS / MICROSECONDS / MINUTES / HOURS / DAYS
             }
         }
     }
