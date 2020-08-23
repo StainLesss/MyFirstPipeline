@@ -1,18 +1,22 @@
 // DECLARATIVE //
 pipeline {
     
+    
+    
     agent any
     stages {
 
         stage('Build') {
             steps {
-                // Cannot use this => def localVar = 'Jenkins' // Can be double quote too
-                /* Add additional data about the build */
+                 input message: 'Please provide a input', parameters: [string(defaultValue: '', description: '', name: 'UserInputParameter', trim: false)]
+               
+                echo "User entered the value : ${params.UserInputParameter}"            
                 echo "Build no ${BUILD_ID}"//only double quote when refering to environmental variable"
                 echo "Build proceed at the location : ${WORKSPACE}"
                 echo pwd()  // pwd show the current location and deleteDir() remove recursivly the files
                 bat 'javac test.java'
                 bat 'java test'
+               
             }
         }
         stage('Test') {
