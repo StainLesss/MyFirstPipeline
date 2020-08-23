@@ -1,13 +1,14 @@
 // DECLARATIVE //
 pipeline {
+    def localVar = 'Jenkins sample' // Can be double quote too
     agent any
     stages {
 
         stage('Build') {
             steps {
-                echo 'Building..'
-                echo JENKINS_HOME
-                echo WORKSPACE
+                /* Add additional data about the build */
+                echo "Build no ${BUILD_ID}"//only double quote when refering to environmental variable"
+                echo "Build proceed at the location : ${WORKSPACE}"
                 bat 'javac test.java'
                 bat 'java test'
             }
