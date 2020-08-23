@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-
+                echo JENKINS_HOME
             }
         }
         stage('Test') {
