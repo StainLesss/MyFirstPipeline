@@ -9,6 +9,7 @@ pipeline {
                 echo JENKINS_HOME
                 echo WORKSPACE
                 bat 'javac test.java'
+                bat 'java test'
             }
         }
         stage('Test') {
