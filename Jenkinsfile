@@ -1,7 +1,7 @@
 // DECLARATIVE //
 pipeline {
     agent any
-    option {
+    options {
         timeout(time: 1,unit: 'HOURS')
     }
     stages {
