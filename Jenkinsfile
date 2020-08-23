@@ -24,7 +24,7 @@ pipeline {
 }
 
 // SCRIPTED //
-node('ScriptedNode') {
+node {
     stage("Build"){
         echo '... building ...'
     }
