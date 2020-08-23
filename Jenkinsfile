@@ -13,6 +13,7 @@ pipeline {
                 echo "User entered the value : ${params.UserInputParameter}"            
                 echo "Build no ${BUILD_ID}"//only double quote when refering to environmental variable"
                 echo "Build proceed at the location : ${WORKSPACE}"
+                echo "The branch used is ${BRANCH_NAME}"
                 echo pwd()  // pwd show the current location and deleteDir() remove recursivly the files
                 bat 'javac test.java'
                 bat 'java test'
