@@ -10,7 +10,7 @@ pipeline {
                 /* Add additional data about the build */
                 echo "Build no ${BUILD_ID}"//only double quote when refering to environmental variable"
                 echo "Build proceed at the location : ${WORKSPACE}"
-                echo pwd()
+                echo pwd()  // pwd show the current location and deleteDir() remove recursivly the files
                 bat 'javac test.java'
                 bat 'java test'
             }
