@@ -7,6 +7,8 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo JENKINS_HOME
+                echo WORKSPACE
+                echo TAG_TIMESTAMP
             }
         }
         stage('Test') {
