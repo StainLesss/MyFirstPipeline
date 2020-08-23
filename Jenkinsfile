@@ -6,7 +6,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                def localVar = 'Jenkins sample' // Can be double quote too
+                def localVar = 'Jenkins' // Can be double quote too
                 /* Add additional data about the build */
                 echo "Build no ${BUILD_ID}"//only double quote when refering to environmental variable"
                 echo "Build proceed at the location : ${WORKSPACE}"
